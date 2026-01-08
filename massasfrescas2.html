@@ -162,7 +162,8 @@
                 <p class="text-gray-500 text-sm mb-8 font-medium">Pagamento único. Sem mensalidades.</p>
 
                 <!-- Primary Button -->
-                <a href="https://pay.kiwify.com.br/1VlXbHx" class="group relative block w-full max-w-md mx-auto bg-[#25d366] hover:bg-[#1ebc57] text-white font-bold text-lg md:text-xl py-5 px-6 rounded-2xl shadow-[0_4px_0_rgb(21,128,61)] transform active:translate-y-1 active:shadow-none transition-all flex items-center justify-center gap-3 animate-pulse-slow mb-8 overflow-hidden">
+                <!-- Adicionado onclick="window.onbeforeunload = null;" para evitar o popup de saída -->
+                <a href="https://pay.kiwify.com.br/1VlXbHx" onclick="window.onbeforeunload = null;" class="group relative block w-full max-w-md mx-auto bg-[#25d366] hover:bg-[#1ebc57] text-white font-bold text-lg md:text-xl py-5 px-6 rounded-2xl shadow-[0_4px_0_rgb(21,128,61)] transform active:translate-y-1 active:shadow-none transition-all flex items-center justify-center gap-3 animate-pulse-slow mb-8 overflow-hidden">
                     <!-- Shine effect -->
                     <div class="absolute top-0 -left-full w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 group-hover:animate-[shimmer_1.5s_infinite]"></div>
                     
