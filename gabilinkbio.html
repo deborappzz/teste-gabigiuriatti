@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriela Giuriatti | Links</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .glass-btn {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-btn:hover {
+            background: rgba(255, 255, 255, 0.95);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+            border-color: #dcbfa8; /* Um tom de bege elegante */
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Fundo animado sutil */
+        .bg-gradient-animate {
+            background: linear-gradient(-45deg, #fdfbf7, #f3e7e0, #fffcf5, #e8dfd8);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body class="bg-gradient-animate min-h-screen text-gray-800 flex flex-col items-center justify-center p-4">
+
+    <!-- Container Principal (Limite de largura para parecer mobile no desktop) -->
+    <main class="w-full max-w-md mx-auto flex flex-col items-center relative z-10">
+
+        <!-- Foto de Perfil -->
+        <div class="relative mb-6 fade-in-up">
+            <div class="w-28 h-28 rounded-full p-1 bg-gradient-to-tr from-yellow-500 via-pink-500 to-purple-500 shadow-lg">
+                <!-- Foto atualizada conforme solicitado -->
+                <img src="GABI 1 .jpeg" 
+                     alt="Foto de Perfil Gabriela Giuriatti" 
+                     class="w-full h-full rounded-full object-cover border-4 border-white">
+            </div>
+            <!-- Ícone de verificado (opcional) -->
+            <div class="absolute bottom-1 right-1 bg-blue-500 text-white rounded-full p-1 border-2 border-white shadow-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- Cabeçalho de Texto -->
+        <div class="text-center mb-8 fade-in-up delay-100">
+            <h1 class="text-2xl font-semibold tracking-wide text-gray-900 mb-1">@gabigiuriatti</h1>
+            <p class="text-sm text-gray-500 font-light tracking-wider uppercase">Lifestyle • Business • Gastronomia</p>
+        </div>
+
+        <!-- Botões de Links (A Core Request) -->
+        <div class="w-full space-y-4 px-2">
+
+            <!-- Link 1: Parceria -->
+            <a href="https://api.whatsapp.com/send/?phone=5554996298383&text=Quero+viver+de+internet&type=phone_number&app_absent=0" class="block w-full group fade-in-up delay-200">
+                <div class="glass-btn flex items-center justify-between p-4 rounded-xl relative overflow-hidden">
+                    <div class="flex items-center gap-4 z-10">
+                        <div class="bg-gray-100 p-2 rounded-full text-gray-700 group-hover:bg-gray-200 transition-colors">
+                            <!-- Ícone Handshake -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-1.42-1.42l.88-.88a5 5 0 0 1 7.07 0l3.88 3.88a3 3 0 1 1-4.24 4.24l-2.5-2.5a8 8 0 0 0-2.79-1.94L9 9"/><path d="M22 2 2 22"/></svg>
+                        </div>
+                        <span class="font-medium text-gray-800">Quero fazer parceria</span>
+                    </div>
+                    <div class="text-gray-400 group-hover:translate-x-1 transition-transform z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Link 2: Viver de Internet (Padronizado) -->
+            <a href="https://api.whatsapp.com/send/?phone=5554996298383&text=Quero+viver+de+internet&type=phone_number&app_absent=0" class="block w-full group fade-in-up delay-300">
+                <div class="glass-btn flex items-center justify-between p-4 rounded-xl">
+                    <div class="flex items-center gap-4">
+                        <!-- Mantive um tom sutil de Amber apenas no ícone para diferenciar o assunto, mas sem destaque excessivo -->
+                        <div class="bg-amber-50 p-2 rounded-full text-amber-700 group-hover:bg-amber-100 transition-colors">
+                            <!-- Ícone Trending/Laptop -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        </div>
+                        <span class="font-medium text-gray-800">Quero viver de internet</span>
+                    </div>
+                    <div class="text-gray-400 group-hover:translate-x-1 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Link 3: La Taverna -->
+            <a href="https://api.whatsapp.com/send/?phone=5554996298383&text=Quero+viver+de+internet&type=phone_number&app_absent=0" class="block w-full group fade-in-up delay-400">
+                <div class="glass-btn flex items-center justify-between p-4 rounded-xl">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-red-50 p-2 rounded-full text-red-800 group-hover:bg-red-100 transition-colors">
+                            <!-- Ícone Utensils -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+                        </div>
+                        <span class="font-medium text-gray-800">Reserva no La Taverna</span>
+                    </div>
+                    <div class="text-gray-400 group-hover:translate-x-1 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- Rodapé -->
+        <footer class="mt-12 text-center fade-in-up delay-400">
+            <div class="flex justify-center gap-6 mb-4">
+                <a href="https://instagram.com/gabigiuriatti" target="_blank" class="text-gray-400 hover:text-pink-600 transition-colors transform hover:scale-110">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-black transition-colors transform hover:scale-110">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </a>
+            </div>
+            <p class="text-xs text-gray-400">© 2026 Gabriela Giuriatti</p>
+        </footer>
+
+    </main>
+
+    <!-- Script para funcionalidade extra se necessário (copiar link, etc) -->
+    <script>
+        // Script simples para garantir que a página carregue suavemente
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Página carregada com sucesso!');
+        });
+    </script>
+</body>
+</html>
