@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GG Culinária - Última Oportunidade</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* Animação suave para o botão */
+        @keyframes subtle-pulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 10px 15px -3px rgba(37, 211, 102, 0.3); }
+            50% { transform: scale(1.02); box-shadow: 0 20px 25px -5px rgba(37, 211, 102, 0.5); }
+        }
+        .animate-pulse-slow {
+            animation: subtle-pulse 2s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50 font-sans text-gray-800 pb-12">
+
+    <!-- Header / Progress Bar -->
+    <div class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-4 py-4 max-w-4xl flex items-center justify-between">
+            <div class="flex items-center gap-2 opacity-60 grayscale hover:grayscale-0 transition-all">
+                <i data-lucide="chef-hat" class="w-5 h-5 text-amber-600"></i>
+                <span class="font-bold text-sm tracking-wide text-gray-600">GABI GIURIATTI</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <span class="text-[10px] md:text-xs font-bold text-amber-700 uppercase tracking-wider bg-amber-100 px-2 py-1 rounded border border-amber-200">Última Tentativa</span>
+            </div>
+        </div>
+        <!-- Progress Line (Amber to indicate caution/opportunity) -->
+        <div class="w-full h-1.5 bg-gray-100">
+            <div class="h-full bg-amber-500 w-[98%] rounded-r-full shadow-[0_0_10px_rgba(245,158,11,0.5)]"></div>
+        </div>
+    </div>
+
+    <!-- Warning Banner -->
+    <div class="bg-amber-50 text-amber-900 border-b border-amber-200 text-center py-3 px-4 font-bold text-sm md:text-base flex items-center justify-center gap-2">
+        <i data-lucide="alert-triangle" class="w-5 h-5 text-amber-600"></i>
+        <span>ESPERE! NÃO FECHE ESSA PÁGINA AINDA...</span>
+    </div>
+
+    <main class="container mx-auto px-4 mt-6 md:mt-10 max-w-3xl">
+        
+        <!-- Main Card -->
+        <div class="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
+            
+            <!-- Headline Section -->
+            <div class="p-8 md:p-12 text-center bg-white relative">
+                <!-- Background decorative element -->
+                <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-amber-200 via-orange-400 to-amber-200"></div>
+
+                <span class="inline-block py-1 px-3 rounded-full bg-gray-100 text-gray-500 font-bold tracking-widest text-xs uppercase mb-6">
+                    Oferta Única de Encerramento
+                </span>
+                
+                <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
+                    O <span class="text-red-600 underline decoration-red-200 decoration-4 underline-offset-4">preço</span> foi o único motivo para você dizer não?
+                </h1>
+
+                <p class="text-lg text-gray-600 max-w-xl mx-auto leading-relaxed">
+                    Eu entendo perfeitamente. Você acabou de fazer um investimento no curso principal e adicionar mais R$ 97,00 agora pode ter ficado pesado no orçamento.<br><br>
+                    Mas eu <strong>realmente</strong> não quero que você continue refém da massa de pacote industrializada nos seus jantares especiais.
+                </p>
+            </div>
+
+            <!-- The "Margin Removal" Logic Box -->
+            <div class="bg-gray-50 p-6 md:p-10 border-y border-gray-100">
+                <div class="flex flex-col md:flex-row items-center gap-6 max-w-2xl mx-auto">
+                    <!-- Image/Icon placeholder -->
+                    <div class="bg-white p-5 rounded-full shadow-md border border-gray-200 text-amber-500 shrink-0 relative">
+                        <i data-lucide="percent" class="w-10 h-10"></i>
+                        <div class="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold w-6 h-6 flex items-center justify-center rounded-full border-2 border-white">-50%</div>
+                    </div>
+                    
+                    <div class="text-center md:text-left">
+                        <h3 class="font-bold text-gray-900 text-xl mb-2">Vou retirar minha margem de lucro</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Quero tanto que você tenha essa experiência que vou liberar o acesso ao <strong>Workshop Mão na Massa</strong> cobrindo apenas os custos de transação e plataforma. <span class="font-semibold text-gray-800">Sem lucrar nada nessa venda</span>, apenas para garantir que você tenha a formação completa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Recap (Simplified) -->
+            <div class="p-8 md:px-12">
+                <p class="text-center text-xs text-gray-400 uppercase font-bold tracking-widest mb-8">
+                    VOCÊ VAI RECEBER O ACESSO COMPLETO:
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8 text-sm text-gray-700 max-w-2xl mx-auto">
+                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                        <div class="bg-green-100 p-1 rounded-full text-green-600 mt-0.5">
+                            <i data-lucide="check" class="w-3 h-3"></i>
+                        </div>
+                        <div>
+                            <span class="font-bold block text-gray-900">A Alquimia da Massa</span>
+                            <span class="text-xs text-gray-500">Proporção áurea de farinha e ovos</span>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                        <div class="bg-green-100 p-1 rounded-full text-green-600 mt-0.5">
+                            <i data-lucide="check" class="w-3 h-3"></i>
+                        </div>
+                        <div>
+                            <span class="font-bold block text-gray-900">Cortes Clássicos</span>
+                            <span class="text-xs text-gray-500">Spaghetti, Tagliatelle e mais</span>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                        <div class="bg-green-100 p-1 rounded-full text-green-600 mt-0.5">
+                            <i data-lucide="check" class="w-3 h-3"></i>
+                        </div>
+                        <div>
+                            <span class="font-bold block text-gray-900">Massas Recheadas</span>
+                            <span class="text-xs text-gray-500">Capeletti, Tortei e Ravioli</span>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                        <div class="bg-green-100 p-1 rounded-full text-green-600 mt-0.5">
+                            <i data-lucide="check" class="w-3 h-3"></i>
+                        </div>
+                        <div>
+                            <span class="font-bold block text-gray-900">Acesso Anual</span>
+                            <span class="text-xs text-gray-500">Assista quantas vezes quiser</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pricing & Call to Action -->
+            <div class="bg-gradient-to-b from-white to-amber-50/50 p-8 md:p-12 text-center border-t border-gray-100">
+                
+                <div class="mb-8 relative inline-block">
+                    <div class="text-gray-400 line-through text-lg font-medium mb-1">De R$ 157,00</div>
+                    <div class="text-gray-400 line-through text-lg font-medium mb-1">Por R$ 97,00</div>
+                    
+                    <div class="mt-4 text-6xl md:text-7xl font-extrabold text-green-600 tracking-tighter drop-shadow-sm">
+                        R$ 47<span class="text-3xl font-bold text-green-500 align-super">,00</span>
+                    </div>
+                    
+                    <div class="absolute -right-16 top-10 rotate-12 hidden md:block">
+                         <div class="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded shadow-lg transform">
+                            MENOR PREÇO
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-gray-500 text-sm mb-8 font-medium">Pagamento único. Sem mensalidades.</p>
+
+                <!-- Primary Button -->
+                <a href="https://pay.kiwify.com.br/1VlXbHx" class="group relative block w-full max-w-md mx-auto bg-[#25d366] hover:bg-[#1ebc57] text-white font-bold text-lg md:text-xl py-5 px-6 rounded-2xl shadow-[0_4px_0_rgb(21,128,61)] transform active:translate-y-1 active:shadow-none transition-all flex items-center justify-center gap-3 animate-pulse-slow mb-8 overflow-hidden">
+                    <!-- Shine effect -->
+                    <div class="absolute top-0 -left-full w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 group-hover:animate-[shimmer_1.5s_infinite]"></div>
+                    
+                    <i data-lucide="check-circle" class="w-6 h-6 fill-white text-green-600"></i>
+                    <span>SIM! Quero levar por R$ 47,00</span>
+                </a>
+
+                <!-- Refusal Link Final -->
+                <div class="max-w-md mx-auto border-t border-gray-200 pt-6">
+                    <p class="text-gray-400 text-xs mb-4 italic">Esta oferta não aparecerá novamente.</p>
+                    
+                    <!-- Final Refusal -->
+                    <a href="https://ggculinaria.com/obrigado" class="inline-flex items-center gap-1.5 text-gray-400 text-xs md:text-sm hover:text-red-500 transition-colors group px-4 py-2 rounded-lg hover:bg-red-50">
+                        <span class="border-b border-gray-300 group-hover:border-red-400 pb-0.5">Não, obrigado. Vou encerrar meu pedido aqui e perder esse desconto.</span>
+                        <i data-lucide="x-circle" class="w-4 h-4 group-hover:text-red-500 transition-colors"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Guarantee Badge -->
+            <div class="bg-gray-100 py-4 px-6 text-center">
+                <div class="flex items-center justify-center gap-2 text-xs md:text-sm text-gray-500">
+                    <i data-lucide="shield-check" class="w-4 h-4 text-gray-400"></i>
+                    Compra Segura &bull; Garantia de 7 Dias &bull; Acesso Imediato
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer strip -->
+        <div class="text-center mt-8 pb-8 text-gray-400 text-xs">
+            <p>Copyright © 2026 GG Culinária. Todos os direitos reservados.</p>
+            <div class="flex justify-center gap-4 mt-2 opacity-50">
+                <span>Termos de Uso</span>
+                <span>Privacidade</span>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+    
+    <!-- Tailwind config for specific animation if needed -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    keyframes: {
+                        shimmer: {
+                            '100%': { left: '120%' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Script de Back Redirect e Proteção de Saída -->
+    <script>
+        (function() {
+            // URL para onde o usuário será enviado ao clicar em VOLTAR
+            // Estratégia: Enviar direto para o checkout com desconto
+            const backRedirectUrl = "https://pay.kiwify.com.br/1VlXbHx";
+
+            // 1. Back Redirect (Manipulação do Histórico)
+            // Empurra o estado atual para o histórico duas vezes para criar uma "barreira"
+            history.pushState({}, "", location.href);
+            history.pushState({}, "", location.href);
+
+            // Escuta o evento de "voltar" do navegador
+            window.onpopstate = function () {
+                // Redireciona para o checkout
+                setTimeout(function () {
+                    location.href = backRedirectUrl;
+                }, 1);
+            };
+
+            // 2. Proteção de Fechamento (Dialogo nativo do navegador)
+            // Exibe uma confirmação se o usuário tentar fechar a aba ou atualizar
+            // Nota: Para funcionar, o usuário precisa ter interagido com a página pelo menos uma vez (clique, scroll, etc.)
+            window.onbeforeunload = function() {
+                return "Espere! Você vai perder o desconto de R$ 50,00. Tem certeza que deseja sair?";
+            };
+        })();
+    </script>
+</body>
+</html>
