@@ -45,8 +45,8 @@
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 bg-red-900/95 backdrop-blur-md border-b border-red-800 shadow-lg">
         <div class="container mx-auto px-4 md:px-6 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <!-- Logo Image Replaces Icon -->
-                <img src="logo.jpg" alt="Logo GG Culinária" class="w-10 h-10 rounded-full object-cover border-2 border-amber-300/30">
+                <!-- Logo Image - Com fallback para iniciais se a imagem falhar -->
+                <img src="logo.jpg" alt="Logo GG Culinária" class="w-10 h-10 rounded-full object-cover border-2 border-amber-300/30 bg-white" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=GG&background=fbbf24&color=78350f&size=128';">
                 <span class="text-lg font-bold tracking-wide text-white">GABI GIURIATTI</span>
             </div>
             
