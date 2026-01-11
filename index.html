@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GG Culinária - Massas e Risotos</title>
+    <title>GG Culinária - Risoto Cremoso e Massa Perfeita</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -14,11 +14,14 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
         body {
             font-family: 'Inter', sans-serif;
+        }
+        .font-signature {
+            font-family: 'Dancing Script', cursive;
         }
         
         /* Smooth Scrolling */
@@ -39,12 +42,11 @@
 <body class="min-h-screen bg-gradient-to-b from-amber-50 to-orange-50 font-sans text-gray-800 overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 bg-red-900/90 backdrop-blur-md border-b border-red-800 shadow-lg">
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 bg-red-900/95 backdrop-blur-md border-b border-red-800 shadow-lg">
         <div class="container mx-auto px-4 md:px-6 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <div class="bg-white/10 p-1.5 rounded-full border border-white/20">
-                    <i data-lucide="chef-hat" class="w-5 h-5 text-amber-300"></i>
-                </div>
+            <div class="flex items-center gap-3">
+                <!-- Logo Image Replaces Icon -->
+                <img src="logo.jpg" alt="Logo GG Culinária" class="w-10 h-10 rounded-full object-cover border-2 border-amber-300/30">
                 <span class="text-lg font-bold tracking-wide text-white">GABI GIURIATTI</span>
             </div>
             
@@ -56,21 +58,21 @@
                 </a>
             </div>
 
-            <button id="menu-btn" class="md:hidden text-white">
-                <i data-lucide="menu" class="w-7 h-7"></i>
+            <button id="menu-btn" class="md:hidden text-white p-1">
+                <i data-lucide="menu" class="w-8 h-8"></i>
             </button>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-red-900 border-b border-red-800 p-6 flex flex-col gap-6 md:hidden shadow-2xl">
-            <a href="#metodo" class="mobile-link text-left text-lg font-medium text-amber-50">O Método</a>
-            <a href="#para-quem" class="mobile-link text-left text-lg font-medium text-amber-50">Para Quem É</a>
-            <a href="#oferta" class="mobile-link bg-amber-400 text-red-900 py-3 rounded-xl text-center font-bold shadow-md">Quero Acessar</a>
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-red-900 border-b border-red-800 p-6 flex flex-col gap-6 md:hidden shadow-2xl transition-all duration-300 ease-in-out">
+            <a href="#metodo" class="mobile-link text-left text-lg font-medium text-amber-50 py-2 border-b border-red-800/50">O Método</a>
+            <a href="#para-quem" class="mobile-link text-left text-lg font-medium text-amber-50 py-2 border-b border-red-800/50">Para Quem É</a>
+            <a href="#oferta" class="mobile-link bg-amber-400 text-red-900 py-4 rounded-xl text-center font-bold shadow-md mt-2">Quero Acessar</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-red-900 via-red-800 to-amber-900 text-white overflow-hidden pt-32 pb-24 md:pt-48 md:pb-40">
+    <section class="relative bg-gradient-to-br from-red-900 via-red-800 to-amber-900 text-white overflow-hidden pt-32 pb-20 md:pt-48 md:pb-40">
         <!-- Background Pattern -->
         <div class="absolute inset-0 opacity-10 pointer-events-none">
             <div class="absolute inset-0" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);"></div>
@@ -79,22 +81,26 @@
         <div class="relative container mx-auto px-4 md:px-6 z-20">
             <div class="max-w-4xl mx-auto text-center">
                 
-                <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 mb-8 animate-fade-in">
+                <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 py-2 rounded-full border border-white/20 mb-6 md:mb-8 animate-fade-in">
                     <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
-                    <span class="text-amber-100 text-xs md:text-sm font-bold tracking-widest uppercase">Biblioteca de Aulas + Projeto GG</span>
+                    <span class="text-amber-100 text-[10px] md:text-sm font-bold tracking-widest uppercase">Biblioteca de Aulas + Projeto GG</span>
                 </div>
                 
-                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8 drop-shadow-md">
-                    Descubra o Segredo dos <br/>
+                <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 md:mb-8 drop-shadow-md">
+                    Risoto Cremoso e Massa Perfeita em Casa — <br class="hidden md:block" />
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-orange-200 italic">
-                        Risotos Cremosos e Massas Perfeitas
-                    </span><br/>
-                    (Que Parecem de Restaurante)
+                        Sem Complicação e Sem Erro
+                    </span>
                 </h1>
                 
-                <p class="text-xl text-amber-100/90 mb-10 leading-relaxed max-w-2xl mx-auto font-light">
-                    Não é apenas sobre seguir receitas. É sobre dominar a técnica que transforma <strong class="text-white font-semibold underline decoration-amber-400 decoration-2 underline-offset-2">ingredientes simples em experiências inesquecíveis</strong>. Acesse agora nossa biblioteca de aulas práticas que não para de crescer.
+                <p class="text-lg md:text-xl text-amber-100/90 mb-8 md:mb-10 leading-relaxed max-w-2xl mx-auto font-light px-2">
+                    A técnica simples que transforma ingredientes básicos em jantares de restaurante, mesmo se você não tem experiência na cozinha.
                 </p>
+
+                <!-- Foto da Gabi na Cozinha -->
+                <div class="mt-8 mb-12 animate-fade-in relative z-10 px-4">
+                    <img src="4.jpeg" alt="Gabi Giuriatti cozinhando" class="w-full h-auto max-w-4xl mx-auto rounded-2xl shadow-2xl border-4 border-white/10 object-cover">
+                </div>
                 
             </div>
         </div>
@@ -108,40 +114,40 @@
     </section>
 
     <!-- Pain Points Section -->
-    <section class="py-20 px-4 bg-[#fffbeb]">
+    <section class="py-16 md:py-20 px-4 bg-[#fffbeb]">
         <div class="container mx-auto max-w-6xl">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
-                    Se o seu "jantar especial" costuma virar um <br/>
-                    <span class="text-red-600">momento de frustração...</span>
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight leading-tight">
+                    Se você já tentou fazer risoto e acabou com um <span class="text-red-600">arroz grudento…</span><br class="hidden md:block"/> 
+                    ou se sua massa nunca tem aquele sabor integrado dos restaurantes…
                 </h2>
-                <div class="w-24 h-1.5 bg-gradient-to-r from-red-600 to-orange-600 mx-auto rounded-full"></div>
+                <div class="w-20 md:w-24 h-1.5 bg-gradient-to-r from-red-600 to-orange-600 mx-auto rounded-full"></div>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
                 <!-- Card 1 -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-amber-100 hover:border-amber-300 transition-all hover:shadow-xl hover:-translate-y-1 flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mb-6">
-                        <i data-lucide="alert-triangle" class="w-8 h-8 text-red-600"></i>
+                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg border-2 border-amber-100 hover:border-amber-300 transition-all hover:shadow-xl hover:-translate-y-1 flex flex-col items-center text-center">
+                    <div class="w-14 h-14 md:w-16 md:h-16 bg-red-50 rounded-full flex items-center justify-center mb-4 md:mb-6">
+                        <i data-lucide="alert-triangle" class="w-7 h-7 md:w-8 md:h-8 text-red-600"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">O "Unidos Venceremos"</h3>
-                    <p class="text-gray-600 leading-relaxed">Você tenta fazer um risoto cremoso, mas acaba com um bloco de arroz grudento e pesado que ninguém consegue terminar.</p>
+                    <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-3">O "Unidos Venceremos"</h3>
+                    <p class="text-sm md:text-base text-gray-600 leading-relaxed">Você tenta fazer um risoto cremoso, mas acaba com um bloco de arroz grudento e pesado que ninguém consegue terminar.</p>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-amber-100 hover:border-amber-300 transition-all hover:shadow-xl hover:-translate-y-1 flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mb-6">
-                        <i data-lucide="frown" class="w-8 h-8 text-red-600"></i>
+                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg border-2 border-amber-100 hover:border-amber-300 transition-all hover:shadow-xl hover:-translate-y-1 flex flex-col items-center text-center">
+                    <div class="w-14 h-14 md:w-16 md:h-16 bg-red-50 rounded-full flex items-center justify-center mb-4 md:mb-6">
+                        <i data-lucide="frown" class="w-7 h-7 md:w-8 md:h-8 text-red-600"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Massa Sem Vida</h3>
-                    <p class="text-gray-600 leading-relaxed">Sua massa parece apenas "macarrão cozido com molho por cima", sem aquela integração de sabores que você sente nos restaurantes.</p>
+                    <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-3">Massa Sem Vida</h3>
+                    <p class="text-sm md:text-base text-gray-600 leading-relaxed">Sua massa parece apenas "macarrão cozido com molho por cima", sem aquela integração de sabores que você sente nos restaurantes.</p>
                 </div>
 
                 <!-- Highlight Quote -->
-                <div class="bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl p-8 shadow-lg border-2 border-red-100 flex flex-col justify-center items-center text-center md:col-span-2 lg:col-span-1">
+                <div class="bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl p-6 md:p-8 shadow-lg border-2 border-red-100 flex flex-col justify-center items-center text-center md:col-span-2 lg:col-span-1">
                     <i data-lucide="quote" class="w-8 h-8 text-amber-400 mb-4 fill-current"></i>
-                    <p class="text-lg text-gray-800 font-medium italic">
-                        "O segredo não está na receita complexa, mas na <br/><span class="bg-amber-200 px-1">técnica certa da base.</span>"
+                    <p class="text-lg md:text-xl text-gray-800 font-medium italic">
+                        "Não é culpa da receita. <br/><span class="bg-amber-200 px-1 font-bold">É falta do método certo.</span>"
                     </p>
                 </div>
             </div>
@@ -149,30 +155,30 @@
     </section>
 
     <!-- The Method Section -->
-    <section id="metodo" class="py-24 px-4 bg-white relative overflow-hidden">
+    <section id="metodo" class="py-16 md:py-24 px-4 bg-white relative overflow-hidden">
         <div class="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-[#fffbeb] to-white"></div>
         
         <div class="container mx-auto max-w-6xl relative z-10">
-            <div class="text-center max-w-4xl mx-auto mb-20">
+            <div class="text-center max-w-4xl mx-auto mb-16 md:mb-20">
                 <span class="text-red-600 font-bold tracking-widest text-xs uppercase mb-3 block">O Método GG</span>
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Muito Além da Receita</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Não é sobre decorar listas de ingredientes. É entender a estrutura de sabor que funciona tanto para um risoto sofisticado quanto para uma massa rápida de terça-feira.
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">A Estrutura Por Trás do Sabor</h2>
+                <p class="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+                    Não é sobre decorar receitas. É dominar a base técnica que funciona para qualquer massa ou risoto — do jantar rápido de terça ao prato sofisticado de sábado.
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-3 gap-6 md:gap-8">
                 <!-- Step 1 -->
                 <div class="group">
-                    <div class="bg-amber-50 rounded-3xl p-8 border border-amber-100 hover:border-amber-300 transition-all h-full relative overflow-hidden">
-                        <div class="absolute -right-4 -top-4 text-9xl font-bold text-amber-100 group-hover:text-amber-200/50 transition-colors select-none">1</div>
+                    <div class="bg-amber-50 rounded-3xl p-6 md:p-8 border border-amber-100 hover:border-amber-300 transition-all h-full relative overflow-hidden">
+                        <div class="absolute -right-4 -top-4 text-8xl md:text-9xl font-bold text-amber-100 group-hover:text-amber-200/50 transition-colors select-none">1</div>
                         <div class="relative z-10">
-                            <div class="bg-white w-14 h-14 rounded-2xl shadow-sm flex items-center justify-center mb-6">
-                                <i data-lucide="layers" class="w-7 h-7 text-orange-600"></i>
+                            <div class="bg-white w-12 h-12 md:w-14 md:h-14 rounded-2xl shadow-sm flex items-center justify-center mb-6">
+                                <i data-lucide="layers" class="w-6 h-6 md:w-7 md:h-7 text-orange-600"></i>
                             </div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4">A Base Invisível</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                Aprenda a construir fundos e caldos aromáticos que são a alma de qualquer prato italiano. É isso que dá profundidade ao sabor.
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">A Base Invisível</h3>
+                            <p class="text-sm md:text-base text-gray-600 leading-relaxed">
+                                Caldos e fundos aromáticos que são a alma do prato — o que dá profundidade real ao sabor.
                             </p>
                         </div>
                     </div>
@@ -180,15 +186,15 @@
 
                 <!-- Step 2 -->
                 <div class="group">
-                    <div class="bg-amber-50 rounded-3xl p-8 border border-amber-100 hover:border-amber-300 transition-all h-full relative overflow-hidden">
-                        <div class="absolute -right-4 -top-4 text-9xl font-bold text-amber-100 group-hover:text-amber-200/50 transition-colors select-none">2</div>
+                    <div class="bg-amber-50 rounded-3xl p-6 md:p-8 border border-amber-100 hover:border-amber-300 transition-all h-full relative overflow-hidden">
+                        <div class="absolute -right-4 -top-4 text-8xl md:text-9xl font-bold text-amber-100 group-hover:text-amber-200/50 transition-colors select-none">2</div>
                         <div class="relative z-10">
-                            <div class="bg-white w-14 h-14 rounded-2xl shadow-sm flex items-center justify-center mb-6">
-                                <i data-lucide="flame" class="w-7 h-7 text-orange-600"></i>
+                            <div class="bg-white w-12 h-12 md:w-14 md:h-14 rounded-2xl shadow-sm flex items-center justify-center mb-6">
+                                <i data-lucide="flame" class="w-6 h-6 md:w-7 md:h-7 text-orange-600"></i>
                             </div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4">A Técnica Mestra</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                Domine a <em>mantecatura</em> perfeita para o risoto e a emulsão correta para a massa. O ponto exato entre o cremoso e o <em>al dente</em>.
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">A Técnica Mestra</h3>
+                            <p class="text-sm md:text-base text-gray-600 leading-relaxed">
+                                O ponto exato do risoto cremoso e da massa al dente, com a emulsão perfeita do molho.
                             </p>
                         </div>
                     </div>
@@ -196,26 +202,26 @@
 
                 <!-- Step 3 -->
                 <div class="group">
-                    <div class="bg-amber-50 rounded-3xl p-8 border border-amber-100 hover:border-amber-300 transition-all h-full relative overflow-hidden">
-                        <div class="absolute -right-4 -top-4 text-9xl font-bold text-amber-100 group-hover:text-amber-200/50 transition-colors select-none">3</div>
+                    <div class="bg-amber-50 rounded-3xl p-6 md:p-8 border border-amber-100 hover:border-amber-300 transition-all h-full relative overflow-hidden">
+                        <div class="absolute -right-4 -top-4 text-8xl md:text-9xl font-bold text-amber-100 group-hover:text-amber-200/50 transition-colors select-none">3</div>
                         <div class="relative z-10">
-                            <div class="bg-white w-14 h-14 rounded-2xl shadow-sm flex items-center justify-center mb-6">
-                                <i data-lucide="infinity" class="w-7 h-7 text-orange-600"></i>
+                            <div class="bg-white w-12 h-12 md:w-14 md:h-14 rounded-2xl shadow-sm flex items-center justify-center mb-6">
+                                <i data-lucide="unlock" class="w-6 h-6 md:w-7 md:h-7 text-orange-600"></i>
                             </div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Multiplicação de Sabores</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                Com a técnica dominada, você nunca mais ficará refém de receitas. Vamos adicionar novas combinações constantemente à sua biblioteca.
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">Liberdade na Cozinha</h3>
+                            <p class="text-sm md:text-base text-gray-600 leading-relaxed">
+                                Com a base dominada, você cria variações sem depender de receitas — e ainda ganha novas combinações mensais.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="mt-16 text-center">
-                <div class="inline-block bg-gradient-to-r from-red-50 to-orange-50 rounded-2xl border border-red-100 p-8 max-w-3xl mx-auto shadow-sm">
-                    <p class="text-lg md:text-2xl font-medium text-gray-800">
+            <div class="mt-12 md:mt-16 text-center">
+                <div class="inline-block bg-gradient-to-r from-red-50 to-orange-50 rounded-2xl border border-red-100 p-6 md:p-8 max-w-3xl mx-auto shadow-sm">
+                    <p class="text-base md:text-2xl font-medium text-gray-800">
                         Resultado: <span class="text-red-600 font-bold bg-red-100 px-2 rounded">Jantares de Chef</span> na sua própria mesa, com receitas que funcionam sempre. <br/>
-                        <span class="italic text-gray-500 text-base mt-2 block">Cozinha italiana, descomplicada.</span>
+                        <span class="italic text-gray-500 text-sm md:text-base mt-2 block">Cozinha italiana, descomplicada.</span>
                     </p>
                 </div>
             </div>
@@ -223,42 +229,42 @@
     </section>
 
     <!-- Deliverables & Bio Split Section -->
-    <section class="py-20 px-4 bg-gradient-to-br from-amber-50 to-white">
+    <section class="py-16 md:py-20 px-4 bg-gradient-to-br from-amber-50 to-white">
         <div class="container mx-auto max-w-6xl">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 
                 <!-- Deliverables Column -->
                 <div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">O Que Você <br/>Recebe Hoje</h2>
-                    <div class="space-y-6">
+                    <h2 class="text-2xl md:text-4xl font-bold text-gray-900 mb-8">O Que Você <br/>Recebe Hoje</h2>
+                    <div class="space-y-4 md:space-y-6">
                         
-                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex gap-4 hover:border-amber-200 transition-colors">
-                            <div class="bg-red-50 p-3 rounded-xl h-fit">
+                        <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border border-gray-100 flex gap-4 hover:border-amber-200 transition-colors">
+                            <div class="bg-red-50 p-3 rounded-xl h-fit flex-shrink-0">
                                 <i data-lucide="play-circle" class="w-6 h-6 text-red-600"></i>
                             </div>
                             <div>
-                                <h4 class="text-lg font-bold text-gray-900">Biblioteca de Aulas Gravadas</h4>
-                                <p class="text-gray-600 text-sm mt-1">Acesso imediato às aulas fundamentais de Massas e Risotos já disponíveis.</p>
+                                <h4 class="text-base md:text-lg font-bold text-gray-900">Acesso Imediato à Biblioteca</h4>
+                                <p class="text-gray-600 text-xs md:text-sm mt-1 font-medium">+15 aulas em vídeo (risotos + massas) + fichas técnicas e lista de compras organizada.</p>
                             </div>
                         </div>
 
-                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex gap-4 hover:border-amber-200 transition-colors">
-                            <div class="bg-red-50 p-3 rounded-xl h-fit">
-                                <i data-lucide="plus-circle" class="w-6 h-6 text-red-600"></i>
+                        <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border border-gray-100 flex gap-4 hover:border-amber-200 transition-colors">
+                            <div class="bg-red-50 p-3 rounded-xl h-fit flex-shrink-0">
+                                <i data-lucide="calendar-check" class="w-6 h-6 text-red-600"></i>
                             </div>
                             <div>
-                                <h4 class="text-lg font-bold text-gray-900">Atualizações Constantes</h4>
-                                <p class="text-gray-600 text-sm mt-1">Novas receitas e técnicas adicionadas ao longo do tempo. Sua biblioteca só cresce.</p>
+                                <h4 class="text-base md:text-lg font-bold text-gray-900">Atualizações Mensais</h4>
+                                <p class="text-gray-600 text-xs md:text-sm mt-1">Novas receitas e técnicas toda primeira semana do mês. Sua biblioteca sempre cresce.</p>
                             </div>
                         </div>
 
-                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex gap-4 hover:border-amber-200 transition-colors">
-                            <div class="bg-red-50 p-3 rounded-xl h-fit">
-                                <i data-lucide="file-text" class="w-6 h-6 text-red-600"></i>
+                        <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border border-gray-100 flex gap-4 hover:border-amber-200 transition-colors">
+                            <div class="bg-red-50 p-3 rounded-xl h-fit flex-shrink-0">
+                                <i data-lucide="message-circle" class="w-6 h-6 text-red-600"></i>
                             </div>
                             <div>
-                                <h4 class="text-lg font-bold text-gray-900">Material de Apoio</h4>
-                                <p class="text-gray-600 text-sm mt-1">Fichas técnicas e listas de compras para facilitar sua organização.</p>
+                                <h4 class="text-base md:text-lg font-bold text-gray-900">Suporte Direto</h4>
+                                <p class="text-gray-600 text-xs md:text-sm mt-1">Tire dúvidas via nossa comunidade e receba respostas em até 24h.</p>
                             </div>
                         </div>
 
@@ -266,10 +272,10 @@
                 </div>
                 
                 <!-- Bio Column -->
-                <div class="relative">
+                <div class="relative mt-8 md:mt-0">
                     <div class="bg-white rounded-3xl p-8 md:p-10 shadow-xl border border-amber-100 relative z-10">
                         <div class="flex flex-col items-center text-center">
-                            <div class="relative w-40 h-40 mb-6">
+                            <div class="relative w-32 h-32 md:w-40 md:h-40 mb-6">
                                 <div class="absolute inset-0 bg-amber-200 rounded-full translate-x-2 translate-y-2"></div>
                                 <img src="1.jpeg" alt="Gabi Giuriatti" class="relative w-full h-full object-cover rounded-full border-4 border-white shadow-lg z-10" onerror="this.src='https://ui-avatars.com/api/?name=Gabi+Giuriatti&background=ef4444&color=fff&size=256';">
                             </div>
@@ -288,12 +294,12 @@
 
                             <div class="flex justify-center gap-8">
                                 <div class="flex flex-col">
-                                    <span class="text-2xl font-bold text-red-600">+10 Anos</span>
-                                    <span class="text-xs text-gray-500 uppercase">de Cozinha</span>
+                                    <span class="text-xl md:text-2xl font-bold text-red-600">+10 Anos</span>
+                                    <span class="text-[10px] md:text-xs text-gray-500 uppercase">de Cozinha</span>
                                 </div>
                                 <div class="flex flex-col">
-                                    <span class="text-2xl font-bold text-red-600">Centenas</span>
-                                    <span class="text-xs text-gray-500 uppercase">de Alunos</span>
+                                    <span class="text-xl md:text-2xl font-bold text-red-600">Centenas</span>
+                                    <span class="text-[10px] md:text-xs text-gray-500 uppercase">de Alunos</span>
                                 </div>
                             </div>
                         </div>
@@ -305,58 +311,14 @@
         </div>
     </section>
 
-    <!-- Target Audience Section -->
-    <section id="para-quem" class="py-24 px-4 bg-white">
-        <div class="container mx-auto max-w-6xl">
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="bg-green-50/50 rounded-3xl p-8 border border-green-100">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-3">
-                        <i data-lucide="check-circle-2" class="text-green-600 w-7 h-7 fill-green-100"></i> Para você se:
-                    </h3>
-                    <ul class="space-y-4">
-                        <li class="flex gap-4 text-gray-700 items-start">
-                            <span class="text-green-600 font-bold mt-0.5">•</span>
-                            A rotina engoliu sua vontade de cozinhar.
-                        </li>
-                        <li class="flex gap-4 text-gray-700 items-start">
-                            <span class="text-green-600 font-bold mt-0.5">•</span>
-                            Seu maior talento culinário atual é "descongelar".
-                        </li>
-                        <li class="flex gap-4 text-gray-700 items-start">
-                            <span class="text-green-600 font-bold mt-0.5">•</span>
-                            Você quer resultados práticos para ontem.
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="bg-red-50/50 rounded-3xl p-8 border border-red-100">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-3">
-                        <i data-lucide="x-circle" class="text-red-600 w-7 h-7 fill-red-100"></i> Não é para você se:
-                    </h3>
-                    <ul class="space-y-4">
-                        <li class="flex gap-4 text-gray-700 items-start">
-                            <span class="text-red-600 font-bold mt-0.5">•</span>
-                            Busca gastronomia avançada e complexa.
-                        </li>
-                        <li class="flex gap-4 text-gray-700 items-start">
-                            <span class="text-red-600 font-bold mt-0.5">•</span>
-                            Quer 100 receitas para decorar e não fazer.
-                        </li>
-                        <li class="flex gap-4 text-gray-700 items-start">
-                            <span class="text-red-600 font-bold mt-0.5">•</span>
-                            Acha que precisa de eletrodomésticos caros.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Testimonials Section (WhatsApp Style) -->
-    <section class="py-20 px-4 bg-[#E5DDD5] border-y border-gray-200" style="background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png'); background-blend-mode: overlay; background-opacity: 0.1;">
-        <div class="container mx-auto max-w-6xl">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+    <section class="py-16 md:py-20 px-4 bg-[#E5DDD5] border-y border-gray-200 relative">
+        <!-- Overlay para garantir legibilidade no mobile sobre a imagem de fundo -->
+        <div class="absolute inset-0" style="background-image: linear-gradient(rgba(229, 221, 213, 0.9), rgba(229, 221, 213, 0.9)), url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png'); background-size: 400px;"></div>
+        
+        <div class="container mx-auto max-w-6xl relative z-10">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-2xl md:text-4xl font-bold text-gray-800 mb-4">
                     O Que Estão Falando no Grupo...
                 </h2>
                 <p class="text-gray-600">Histórias reais de quem já destravou a cozinha</p>
@@ -371,7 +333,7 @@
                         <p class="text-sm font-bold text-orange-600">Ana Paula</p>
                     </div>
                     <p class="text-gray-800 text-sm leading-relaxed">
-                        Gabi, socorro! 😱 Fiz o risoto de limão siciliano ontem e meu marido perguntou se eu tinha encomendado kkkkk Ficou perfeito, cremoso igual de restaurante! Obrigada por ensinar o pulo do gato do caldo!
+                        “Meu marido achou que eu tinha pedido delivery!” 😱 Fiz o risoto de limão siciliano do método e ele não acreditou que saiu da minha cozinha. O cremoso era igual ao do restaurante italiano da esquina!
                     </p>
                     <div class="text-right mt-2">
                         <span class="text-[10px] text-gray-400">19:42</span>
@@ -442,21 +404,20 @@
     </section>
 
     <!-- Final CTA / Offer - Plans -->
-    <section id="oferta" class="py-24 px-4 bg-gradient-to-b from-amber-50 to-orange-100">
+    <section id="oferta" class="py-16 md:py-24 px-4 bg-gradient-to-b from-amber-50 to-orange-100">
         <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Chega de Trocar <br/>
-                <span class="text-red-600">Qualidade por Velocidade</span>
+            <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+                Escolha Seu Plano e Comece Hoje
             </h2>
             
-            <p class="text-xl text-gray-700 mb-16 max-w-2xl mx-auto leading-relaxed">
-                Escolha o plano ideal para garantir seu acesso contínuo às melhores técnicas de massas e risotos.
+            <p class="text-lg md:text-xl text-gray-700 mb-16 max-w-2xl mx-auto leading-relaxed">
+                Acesso imediato, suporte direto e técnicas que funcionam para sempre. Risoto cremoso na sua mesa em menos de 30 minutos.
             </p>
 
-            <div class="grid md:grid-cols-3 gap-8 items-center max-w-5xl mx-auto mb-20">
+            <div class="grid md:grid-cols-3 gap-8 items-center max-w-5xl mx-auto mb-16">
                 
                 <!-- Card 1: Mensal (Standard) -->
-                <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:border-amber-300 transition-all hover:-translate-y-1 relative order-2 md:order-1">
+                <div class="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 hover:border-amber-300 transition-all hover:-translate-y-1 relative order-2 md:order-1 h-full flex flex-col">
                     <div class="mb-6">
                         <h3 class="text-xl font-bold text-gray-500 uppercase tracking-widest mb-4">Plano Mensal</h3>
                         <div class="flex flex-col items-center gap-1">
@@ -470,19 +431,21 @@
                         <p class="text-red-600 font-medium text-sm mt-2">desconto promocional</p>
                     </div>
 
-                    <ul class="space-y-4 text-left text-gray-600 text-sm mb-8 border-t border-gray-100 pt-6">
-                        <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-green-500"></i> Acesso imediato</li>
-                        <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-green-500"></i> Renovação mensal</li>
-                        <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-green-500"></i> Cancele quando quiser</li>
+                    <ul class="space-y-4 text-left text-gray-600 text-sm mb-8 border-t border-gray-100 pt-6 flex-grow">
+                        <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0"></i> Acesso imediato</li>
+                        <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0"></i> Conteúdo completo</li>
+                        <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0"></i> Acesso ao suporte</li>
                     </ul>
 
-                    <a href="https://pay.kiwify.com.br/TiL8DG0" class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-4 px-6 rounded-xl transition-colors flex items-center justify-center">
-                        Escolher Mensal
-                    </a>
+                    <div>
+                        <a href="https://pay.kiwify.com.br/TiL8DG0" class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-4 px-6 rounded-xl transition-colors flex items-center justify-center shadow-md hover:shadow-lg transform hover:scale-[1.02]">
+                            COMEÇAR AGORA
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Card 2: Anual (DESTAQUE / RECOMENDADO) -->
-                <div class="bg-white rounded-3xl p-8 shadow-2xl border-4 border-amber-400 relative transform md:-translate-y-4 z-10 order-1 md:order-2">
+                <div class="bg-white rounded-3xl p-6 md:p-8 shadow-2xl border-4 border-amber-400 relative transform md:-translate-y-4 z-10 order-1 md:order-2 h-full flex flex-col">
                     <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-red-600 text-white px-6 py-2 rounded-full font-bold text-sm tracking-wide shadow-lg uppercase">
                         Recomendado
                     </div>
@@ -490,8 +453,8 @@
                     <div class="mb-6 mt-4">
                         <h3 class="text-xl font-bold text-red-600 uppercase tracking-widest mb-4">Plano Anual</h3>
                         <div class="flex flex-col items-center">
-                            <!-- Fundo amarelo fraco alterado de bg-yellow-100 para bg-yellow-50 (ainda mais apagado) -->
-                            <span class="text-3xl font-extrabold text-gray-900 tracking-tight whitespace-nowrap bg-yellow-50 px-4 py-1 rounded-lg">12x R$ 29,90</span>
+                            <!-- Fonte ajustada para mobile (text-2xl sm:text-3xl) -->
+                            <span class="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight whitespace-nowrap bg-yellow-50 px-4 py-1 rounded-lg">12x R$ 29,90</span>
                         </div>
                         <div class="mt-2">
                             <!-- Valor à vista bem apagado -->
@@ -500,20 +463,22 @@
                         <p class="text-green-600 font-bold text-sm mt-3">Economia de 42% sobre o mensal</p>
                     </div>
 
-                    <ul class="space-y-4 text-left text-gray-700 mb-8 border-t border-gray-100 pt-6">
-                        <li class="flex gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-red-600"></i> <strong>12 meses de acesso</strong></li>
-                        <li class="flex gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-red-600"></i> Todas as aulas gravadas</li>
-                        <li class="flex gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-red-600"></i> Suporte prioritário</li>
-                        <li class="flex gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-red-600"></i> Atualizações do GG Culinária</li>
+                    <ul class="space-y-4 text-left text-gray-700 mb-8 border-t border-gray-100 pt-6 flex-grow">
+                        <li class="flex gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-red-600 flex-shrink-0"></i> <strong>12 meses de acesso</strong></li>
+                        <li class="flex gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-red-600 flex-shrink-0"></i> Todas as aulas gravadas</li>
+                        <li class="flex gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-red-600 flex-shrink-0"></i> Suporte prioritário</li>
+                        <li class="flex gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-red-600 flex-shrink-0"></i> Atualizações do GG Culinária</li>
                     </ul>
 
-                    <a href="https://pay.kiwify.com.br/1xXaiox" class="w-full bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white font-bold py-5 px-8 rounded-xl text-lg shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02] flex items-center justify-center">
-                        COMEÇAR AGORA
-                    </a>
+                    <div>
+                        <a href="https://pay.kiwify.com.br/1xXaiox" class="w-full bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white text-sm font-bold py-5 px-4 rounded-xl text-lg shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02] flex items-center justify-center text-center uppercase tracking-wide">
+                            COMEÇAR AGORA
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Card 3: Semestral -->
-                <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:border-amber-300 transition-all hover:-translate-y-1 relative order-3">
+                <div class="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 hover:border-amber-300 transition-all hover:-translate-y-1 relative order-3 h-full flex flex-col">
                     <div class="mb-6">
                         <h3 class="text-xl font-bold text-gray-500 uppercase tracking-widest mb-4">Semestral</h3>
                         <div class="flex flex-col items-center">
@@ -525,15 +490,30 @@
                         <p class="text-green-600 font-medium text-sm mt-3">Economia de 16% sobre o mensal</p>
                     </div>
 
-                    <ul class="space-y-4 text-left text-gray-600 text-sm mb-8 border-t border-gray-100 pt-6">
-                        <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-green-500"></i> Acesso por 6 meses</li>
-                        <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-green-500"></i> Conteúdo completo</li>
-                        <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-green-500"></i> Acesso ao suporte</li>
+                    <ul class="space-y-4 text-left text-gray-600 text-sm mb-8 border-t border-gray-100 pt-6 flex-grow">
+                        <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0"></i> Acesso por 6 meses</li>
+                        <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0"></i> Conteúdo completo</li>
+                        <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0"></i> Acesso ao suporte</li>
                     </ul>
 
-                    <a href="https://pay.kiwify.com.br/eyokXuO" class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-4 px-6 rounded-xl transition-colors flex items-center justify-center">
-                        Escolher Semestral
-                    </a>
+                    <div>
+                        <a href="https://pay.kiwify.com.br/eyokXuO" class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-4 px-6 rounded-xl transition-colors flex items-center justify-center shadow-md hover:shadow-lg transform hover:scale-[1.02]">
+                            Escolher Semestral
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Guarantee Section -->
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl border border-amber-200 p-6 md:p-8 shadow-lg mb-20 flex flex-col md:flex-row items-center gap-6">
+                <div class="w-20 h-20 md:w-24 md:h-24 flex-shrink-0 bg-amber-50 rounded-full flex items-center justify-center border-4 border-amber-100">
+                    <i data-lucide="shield-check" class="w-10 h-10 md:w-12 md:h-12 text-amber-500"></i>
+                </div>
+                <div class="text-center md:text-left">
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-2">Experimente Sem Risco</h3>
+                    <p class="text-sm md:text-base text-gray-600 leading-relaxed">
+                        Você tem <strong>7 dias</strong> para testar o método. Se não gostar ou não achar que vale o investimento, devolvemos 100% do seu dinheiro. Sem perguntas, sem letras miúdas.
+                    </p>
                 </div>
             </div>
 
@@ -545,14 +525,14 @@
                 </div>
 
                 <div class="space-y-4">
-                    <!-- FAQ 1 -->
+                    <!-- FAQ 1 (Updated) -->
                     <div class="border border-gray-200 rounded-xl overflow-hidden bg-white hover:border-amber-200 transition-colors">
                         <button class="w-full flex justify-between items-center p-5 text-left font-bold text-gray-800 focus:outline-none" onclick="toggleFaq(this)">
-                            <span>Não sei cozinhar nada, vou conseguir fazer os risotos?</span>
+                            <span>Não tenho experiência, vou conseguir?</span>
                             <i data-lucide="chevron-down" class="w-5 h-5 text-amber-500 transform transition-transform duration-200"></i>
                         </button>
-                        <div class="hidden px-5 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
-                            Com certeza! Começamos do zero, ensinando desde o caldo até a finalização. A técnica é explicada de forma simples para que qualquer pessoa consiga executar.
+                        <div class="hidden px-5 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4 text-sm md:text-base">
+                            Sim! O método foi pensado para iniciantes. Você vai aprender a base passo a passo, com vídeos demonstrativos e dicas de ajuste. Comece pelo risoto básico — em 20 minutos ele estará pronto.
                         </div>
                     </div>
 
@@ -562,7 +542,7 @@
                             <span>Quantas receitas estão disponíveis?</span>
                             <i data-lucide="chevron-down" class="w-5 h-5 text-amber-500 transform transition-transform duration-200"></i>
                         </button>
-                        <div class="hidden px-5 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
+                        <div class="hidden px-5 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4 text-sm md:text-base">
                             Você já tem acesso imediato às aulas fundamentais gravadas. Como é uma biblioteca viva, novas receitas e variações são adicionadas periodicamente, sem custo extra para assinantes.
                         </div>
                     </div>
@@ -573,7 +553,7 @@
                             <span>Como recebo o acesso?</span>
                             <i data-lucide="chevron-down" class="w-5 h-5 text-amber-500 transform transition-transform duration-200"></i>
                         </button>
-                        <div class="hidden px-5 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
+                        <div class="hidden px-5 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4 text-sm md:text-base">
                             Assim que o pagamento for aprovado, você recebe um email automático da plataforma com seu login e senha. O acesso é imediato e você já pode começar a assistir.
                         </div>
                     </div>
@@ -584,7 +564,7 @@
                             <span>Preciso de panela de risoto ou máquina de macarrão?</span>
                             <i data-lucide="chevron-down" class="w-5 h-5 text-amber-500 transform transition-transform duration-200"></i>
                         </button>
-                        <div class="hidden px-5 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
+                        <div class="hidden px-5 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4 text-sm md:text-base">
                             Não! O foco é usar o que você já tem em casa. Ensinamos a extrair o melhor resultado com utensílios comuns do dia a dia.
                         </div>
                     </div>
@@ -595,7 +575,7 @@
                             <span>O que é a renovação automática?</span>
                             <i data-lucide="chevron-down" class="w-5 h-5 text-amber-500 transform transition-transform duration-200"></i>
                         </button>
-                        <div class="hidden px-5 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
+                        <div class="hidden px-5 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4 text-sm md:text-base">
                             Para garantir que você não perca o acesso às novas aulas e atualizações, o plano se renova automaticamente ao final do período (mês, semestre ou ano). Você pode cancelar quando quiser.
                         </div>
                     </div>
@@ -618,11 +598,20 @@
                 </div>
                 <span class="text-2xl font-bold tracking-wider">GABI GIURIATTI</span>
             </div>
-            <p class="text-gray-400 mb-8 font-light tracking-widest text-sm uppercase">Culinária Afetiva</p>
+            
+            <p class="text-gray-400 mb-8 font-light text-sm">
+                Pagamento 100% seguro • Acesso vitalício durante a assinatura • Suporte via e-mail
+            </p>
+
+            <!-- Signature Block -->
+            <div class="flex flex-col items-center justify-center gap-3 mb-8">
+                <img src="GABI 1 .jpeg" alt="Gabi Giuriatti" class="w-16 h-16 rounded-full object-cover border-2 border-amber-400 shadow-lg">
+                <p class="font-signature text-2xl text-amber-100">Com carinho, Gabi Giuriatti</p>
+            </div>
             
             <div class="border-t border-gray-800 pt-8">
                 <p class="text-sm text-gray-500">
-                    © 2026 Gabriele Giuriatti. Todos os direitos reservados.
+                    © 2026 GG Culinária • Gabi Giuriatti • Todos os direitos reservados
                 </p>
             </div>
         </div>
