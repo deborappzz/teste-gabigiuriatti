@@ -110,18 +110,18 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section (Sem imagens, centralizado) -->
     <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
         <!-- Background Decor -->
         <div class="absolute inset-0 bg-gradient-to-br from-pasta-100 via-white to-red-50 -z-10"></div>
         <div class="absolute top-0 right-0 w-1/2 h-full bg-orange-100/30 -skew-x-12 translate-x-1/4 blur-3xl -z-10"></div>
 
         <div class="container mx-auto px-4 md:px-6 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="max-w-4xl mx-auto text-center">
                 
-                <!-- Copy Column -->
-                <div class="text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 bg-tomato-50 text-tomato-800 px-4 py-1.5 rounded-full border border-tomato-100 mb-6 mx-auto lg:mx-0">
+                <!-- Copy Column Center -->
+                <div class="w-full">
+                    <div class="inline-flex items-center gap-2 bg-tomato-50 text-tomato-800 px-4 py-1.5 rounded-full border border-tomato-100 mb-6 mx-auto">
                         <span class="flex h-2 w-2 relative">
                             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                             <span class="relative inline-flex rounded-full h-2 w-2 bg-red-600"></span>
@@ -133,35 +133,24 @@
                         Traga a <span class="text-tomato-800 italic font-medium">Itália</span> para dentro da sua cozinha.
                     </h1>
                     
-                    <p class="text-lg md:text-xl text-gray-600 mb-8 font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
+                    <p class="text-lg md:text-xl text-gray-600 mb-8 font-light leading-relaxed max-w-2xl mx-auto">
                         Bruschettas, Lasanha e Nhoque feitos do zero. Descubra como transformar farinha e ovos em pratos de restaurante, <strong>mesmo que você nunca tenha feito massa antes.</strong>
                     </p>
 
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                         <!-- Botão CTA Hero -->
-                        <div class="flex flex-col items-center lg:items-start gap-4 w-full sm:w-auto">
+                        <div class="flex flex-col items-center gap-4 w-full sm:w-auto">
                             <a href="#oferta" class="btn-pulse bg-tomato-700 hover:bg-tomato-800 text-white text-lg font-bold px-8 py-4 rounded-xl shadow-xl shadow-red-200/50 transition-all flex items-center justify-center gap-2 w-full">
                                 <span>Quero Fazer Minha Massa</span>
                                 <i data-lucide="arrow-right" class="w-5 h-5"></i>
                             </a>
                             
-                            <!-- Imagem abaixo do botão (do Drive) -->
-                            <img src="image_c9c15d.jpg" alt="Detalhe de massa fresca" class="h-16 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity mt-2">
+                            <!-- Garantia de texto -->
+                            <div class="flex items-center gap-2 text-sm text-gray-500 py-1">
+                                <i data-lucide="shield-check" class="w-4 h-4 text-green-600"></i>
+                                <span>Garantia de 7 dias</span>
+                            </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Visual Column -->
-                <div class="relative max-w-lg mx-auto lg:max-w-none w-full">
-                    <!-- Imagem Principal -->
-                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white transform rotate-2 hover:rotate-0 transition-transform duration-500">
-                        <!-- Imagem Hero: Massa Fresca Crua (Tagliatelle) - Link Atualizado e Estável -->
-                        <img src="https://images.unsplash.com/photo-1598965402089-997ce61e63d4?q=80&w=1000&auto=format&fit=crop" alt="Ninhos de tagliatelle frescos crus sobre bancada enfarinhada" class="w-full h-auto object-cover" onerror="this.src='https://images.unsplash.com/photo-1612966874574-e0a92d869af0?q=80&w=1000&auto=format&fit=crop'">
-                    </div>
-                    
-                    <!-- Decor Elements -->
-                    <div class="absolute -top-10 -right-10 text-pasta-300 opacity-20 pointer-events-none">
-                        <i data-lucide="chef-hat" class="w-32 h-32"></i>
                     </div>
                 </div>
             </div>
@@ -441,8 +430,8 @@
         <div class="container mx-auto px-4 max-w-4xl flex flex-col md:flex-row items-center gap-8">
             <div class="w-32 h-32 md:w-48 md:h-48 flex-shrink-0 relative">
                 <div class="absolute inset-0 bg-pasta-300 rounded-full rotate-6"></div>
-                <!-- Imagem Bio (com fallback seguro) -->
-                <img src="1.jpeg" alt="Gabi Giuriatti" class="relative w-full h-full object-cover rounded-full border-4 border-white shadow-lg" onerror="this.src='https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=256&auto=format&fit=crop';">
+                <!-- Imagem Bio -->
+                <img src="1.jpeg" alt="Gabi Giuriatti" class="relative w-full h-full object-cover rounded-full border-4 border-white shadow-lg">
             </div>
             <div class="text-center md:text-left">
                 <h3 class="text-2xl font-serif font-bold text-gray-900 mb-2">Quem é Gabi Giuriatti?</h3>
