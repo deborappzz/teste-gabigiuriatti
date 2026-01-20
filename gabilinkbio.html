@@ -6,31 +6,71 @@
     <title>Gabriele Giuriatti | Links</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap');
+
+        /* Configuração de Cores Gastronômicas */
+        :root {
+            --wine-red: #722F37; /* Cor de Vinho/Marsala */
+            --warm-wheat: #F5E6D3; /* Cor de Trigo/Massa crua */
+            --sage-green: #8A9A5B; /* Verde Sálvia (detalhe) */
+            --dark-charcoal: #2D2D2D;
+        }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Lato', sans-serif;
+            background-color: var(--warm-wheat);
         }
         
-        h1, h2 {
+        h1, h2, .font-serif {
             font-family: 'Playfair Display', serif;
         }
 
-        .glass-btn {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        /* Estilo dos Banners de Imagem */
+        .banner-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .banner-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
         }
 
-        .glass-btn:hover {
-            background: rgba(255, 255, 255, 0.95);
+        .banner-overlay {
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 100%);
+            transition: background 0.4s ease;
+        }
+
+        .banner-card:hover .banner-overlay {
+            background: linear-gradient(to top, rgba(114, 47, 55, 0.85) 0%, rgba(114, 47, 55, 0.3) 100%); /* Overlay vinho no hover */
+        }
+
+        .banner-img {
+            transition: transform 0.6s ease;
+        }
+
+        .banner-card:hover .banner-img {
+            transform: scale(1.05);
+        }
+
+        /* Estilo Botões Secundários (Vinho Sólido) */
+        .solid-btn {
+            background-color: var(--wine-red);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 6px -1px rgba(114, 47, 55, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .solid-btn:hover {
+            background-color: #5a242b; /* Vinho mais escuro */
             transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
-            border-color: #dcbfa8; /* Um tom de bege elegante */
         }
 
+        /* Animações */
         .fade-in-up {
             animation: fadeInUp 0.8s ease-out forwards;
             opacity: 0;
@@ -41,130 +81,136 @@
         .delay-200 { animation-delay: 0.2s; }
         .delay-300 { animation-delay: 0.3s; }
         .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
 
         @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Fundo animado sutil */
-        .bg-gradient-animate {
-            background: linear-gradient(-45deg, #fdfbf7, #f3e7e0, #fffcf5, #e8dfd8);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
-        }
-
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        /* Fundo com textura sutil */
+        .bg-texture {
+            background-image: radial-gradient(#d4c5b0 1px, transparent 1px);
+            background-size: 20px 20px;
         }
     </style>
 </head>
-<body class="bg-gradient-animate min-h-screen text-gray-800 flex flex-col items-center justify-center p-4">
+<body class="bg-texture min-h-screen text-gray-800 flex flex-col items-center py-10 px-4">
 
-    <!-- Container Principal (Limite de largura para parecer mobile no desktop) -->
+    <!-- Container Principal -->
     <main class="w-full max-w-md mx-auto flex flex-col items-center relative z-10">
 
-        <!-- Foto de Perfil -->
-        <div class="relative mb-6 fade-in-up">
-            <div class="w-28 h-28 rounded-full p-1 bg-gradient-to-tr from-yellow-500 via-pink-500 to-purple-500 shadow-lg">
-                <!-- Foto atualizada conforme solicitado -->
+        <!-- Foto de Perfil (Preservada) -->
+        <div class="relative mb-6 fade-in-up group">
+            <div class="w-32 h-32 rounded-full p-1 bg-white shadow-xl relative z-10">
                 <img src="GABI 1 .jpeg" 
                      alt="Foto de Perfil Gabriele Giuriatti" 
-                     class="w-full h-full rounded-full object-cover border-4 border-white">
+                     class="w-full h-full rounded-full object-cover border-2 border-[#F5E6D3]">
             </div>
-            <!-- Ícone de verificado (opcional) -->
-            <div class="absolute bottom-1 right-1 bg-blue-500 text-white rounded-full p-1 border-2 border-white shadow-sm">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                </svg>
+            <!-- Elemento decorativo atrás da foto -->
+            <div class="absolute top-0 -left-2 w-36 h-36 rounded-full border-2 border-[#722F37] opacity-20 transform -translate-x-1 -translate-y-1"></div>
+        </div>
+
+        <!-- Cabeçalho -->
+        <div class="text-center mb-10 fade-in-up delay-100">
+            <h1 class="text-3xl font-serif font-bold text-[#2D2D2D] mb-2 tracking-wide">@gabigiuriatti</h1>
+            <div class="flex items-center justify-center gap-2 text-xs font-bold tracking-widest text-[#722F37] uppercase">
+                <span>Gastronomia</span>
+                <span class="w-1 h-1 bg-[#722F37] rounded-full"></span>
+                <span>Lifestyle</span>
+                <span class="w-1 h-1 bg-[#722F37] rounded-full"></span>
+                <span>Business</span>
             </div>
         </div>
 
-        <!-- Cabeçalho de Texto -->
-        <div class="text-center mb-8 fade-in-up delay-100">
-            <h1 class="text-2xl font-semibold tracking-wide text-gray-900 mb-1">@gabigiuriatti</h1>
-            <p class="text-sm text-gray-500 font-light tracking-wider uppercase">Lifestyle • Business • Gastronomia</p>
-        </div>
+        <!-- Área dos Banners (Destaques Visuais) -->
+        <div class="w-full space-y-6 px-1 mb-8">
 
-        <!-- Botões de Links (A Core Request) -->
-        <div class="w-full space-y-4 px-2">
-
-            <!-- Link 1: Parceria -->
-            <a href="https://api.whatsapp.com/send/?phone=5554996298383&text=Quero+viver+de+internet&type=phone_number&app_absent=0" class="block w-full group fade-in-up delay-200">
-                <div class="glass-btn flex items-center justify-between p-4 rounded-xl relative overflow-hidden">
-                    <div class="flex items-center gap-4 z-10">
-                        <div class="bg-gray-100 p-2 rounded-full text-gray-700 group-hover:bg-gray-200 transition-colors">
-                            <!-- Ícone Handshake -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-1.42-1.42l.88-.88a5 5 0 0 1 7.07 0l3.88 3.88a3 3 0 1 1-4.24 4.24l-2.5-2.5a8 8 0 0 0-2.79-1.94L9 9"/><path d="M22 2 2 22"/></svg>
-                        </div>
-                        <span class="font-medium text-gray-800">Quero fazer parceria</span>
-                    </div>
-                    <div class="text-gray-400 group-hover:translate-x-1 transition-transform z-10">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            <!-- Banner 1: Massas e Risotos -->
+            <a href="https://api.whatsapp.com/send/?phone=5554996298383&text=Ol%C3%A1!+Gostaria+de+saber+mais+sobre+Massas+e+Risotos&type=phone_number&app_absent=0" class="block w-full h-40 banner-card fade-in-up delay-200 group">
+                <!-- Imagem de fundo atualizada: Risoto Cremoso (Link Corrigido) -->
+                <img src="https://images.unsplash.com/photo-1595295333158-4742f28fbd85?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                     alt="Massas e Risotos" class="absolute inset-0 w-full h-full object-cover banner-img">
+                <div class="absolute inset-0 banner-overlay"></div>
+                
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-white z-10 p-4 text-center">
+                    <span class="text-xs uppercase tracking-[0.2em] mb-2 opacity-90">Aprenda</span>
+                    <h3 class="font-serif text-3xl italic leading-none">Massas & Risotos</h3>
+                    <div class="mt-3 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                        <span class="text-xs border border-white px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm">Garanta a sua vaga</span>
                     </div>
                 </div>
             </a>
 
-            <!-- Link 2: Viver de Internet (Padronizado) -->
-            <a href="https://api.whatsapp.com/send/?phone=5554996298383&text=Quero+viver+de+internet&type=phone_number&app_absent=0" class="block w-full group fade-in-up delay-300">
-                <div class="glass-btn flex items-center justify-between p-4 rounded-xl">
-                    <div class="flex items-center gap-4">
-                        <!-- Mantive um tom sutil de Amber apenas no ícone para diferenciar o assunto, mas sem destaque excessivo -->
-                        <div class="bg-amber-50 p-2 rounded-full text-amber-700 group-hover:bg-amber-100 transition-colors">
-                            <!-- Ícone Trending/Laptop -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                        </div>
-                        <span class="font-medium text-gray-800">Quero viver de internet</span>
-                    </div>
-                    <div class="text-gray-400 group-hover:translate-x-1 transition-transform">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            <!-- Banner 2: Massas Frescas -->
+            <a href="https://api.whatsapp.com/send/?phone=5554996298383&text=Ol%C3%A1!+Gostaria+de+saber+mais+sobre+Massas+Frescas&type=phone_number&app_absent=0" class="block w-full h-40 banner-card fade-in-up delay-300 group">
+                <!-- Imagem de fundo: Fazendo Massa -->
+                <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                     alt="Massas Frescas" class="absolute inset-0 w-full h-full object-cover banner-img">
+                <div class="absolute inset-0 banner-overlay"></div>
+                
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-white z-10 p-4 text-center">
+                    <span class="text-xs uppercase tracking-[0.2em] mb-2 opacity-90">Aprenda</span>
+                    <h3 class="font-serif text-3xl italic leading-none">Massas Frescas</h3>
+                    <div class="mt-3 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                        <span class="text-xs border border-white px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm">Garanta a sua vaga</span>
                     </div>
                 </div>
             </a>
 
-            <!-- Link 3: La Taverna -->
+        </div>
+
+        <!-- Botões Secundários (Links Rápidos) -->
+        <div class="w-full space-y-3 px-1">
+
+            <!-- Link: Parceria -->
             <a href="https://api.whatsapp.com/send/?phone=5554996298383&text=Quero+viver+de+internet&type=phone_number&app_absent=0" class="block w-full group fade-in-up delay-400">
-                <div class="glass-btn flex items-center justify-between p-4 rounded-xl">
+                <div class="solid-btn flex items-center justify-between p-4 rounded-xl">
                     <div class="flex items-center gap-4">
-                        <div class="bg-red-50 p-2 rounded-full text-red-800 group-hover:bg-red-100 transition-colors">
-                            <!-- Ícone Utensils -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
-                        </div>
-                        <span class="font-medium text-gray-800">Reserva no La Taverna</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-1.42-1.42l.88-.88a5 5 0 0 1 7.07 0l3.88 3.88a3 3 0 1 1-4.24 4.24l-2.5-2.5a8 8 0 0 0-2.79-1.94L9 9"/><path d="M22 2 2 22"/></svg>
+                        <span class="font-medium">Quero fazer parceria</span>
                     </div>
-                    <div class="text-gray-400 group-hover:translate-x-1 transition-transform">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-70 group-hover:translate-x-1 transition-transform"><path d="m9 18 6-6-6-6"/></svg>
+                </div>
+            </a>
+
+            <!-- Link: Viver de Internet -->
+            <a href="https://api.whatsapp.com/send/?phone=5554996298383&text=Quero+viver+de+internet&type=phone_number&app_absent=0" class="block w-full group fade-in-up delay-500">
+                <div class="solid-btn flex items-center justify-between p-4 rounded-xl">
+                    <div class="flex items-center gap-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        <span class="font-medium">Quero viver de internet</span>
                     </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-70 group-hover:translate-x-1 transition-transform"><path d="m9 18 6-6-6-6"/></svg>
+                </div>
+            </a>
+
+            <!-- Link: La Taverna -->
+            <a href="https://api.whatsapp.com/send/?phone=5554996298383&text=Quero+viver+de+internet&type=phone_number&app_absent=0" class="block w-full group fade-in-up delay-500">
+                <div class="solid-btn flex items-center justify-between p-4 rounded-xl">
+                    <div class="flex items-center gap-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+                        <span class="font-medium">Reserva no La Taverna</span>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-70 group-hover:translate-x-1 transition-transform"><path d="m9 18 6-6-6-6"/></svg>
                 </div>
             </a>
 
         </div>
 
-        <!-- Rodapé -->
-        <footer class="mt-12 text-center fade-in-up delay-400">
-            <div class="flex justify-center gap-6 mb-4">
-                <a href="https://instagram.com/gabigiuriatti" target="_blank" class="text-gray-400 hover:text-pink-600 transition-colors transform hover:scale-110">
+        <!-- Rodapé Minimalista -->
+        <footer class="mt-16 text-center fade-in-up delay-500">
+            <div class="flex justify-center gap-6 mb-4 text-[#722F37]">
+                <a href="https://instagram.com/gabigiuriatti" target="_blank" class="hover:scale-110 transition-transform">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
                 </a>
-                <a href="#" class="text-gray-400 hover:text-black transition-colors transform hover:scale-110">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                </a>
             </div>
-            <p class="text-xs text-gray-400">© 2026 Gabriele Giuriatti</p>
+            <p class="text-xs text-[#722F37]/60 font-medium">© 2026 Gabriele Giuriatti</p>
         </footer>
 
     </main>
 
-    <!-- Script para funcionalidade extra se necessário (copiar link, etc) -->
     <script>
-        // Script simples para garantir que a página carregue suavemente
-        document.addEventListener('DOMContentLoaded', () => {
-            console.log('Página carregada com sucesso!');
-        });
+        document.addEventListener('DOMContentLoaded', () => console.log('Página carregada'));
     </script>
 </body>
 </html>
